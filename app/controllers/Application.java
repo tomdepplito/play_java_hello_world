@@ -2,13 +2,14 @@ package controllers;
 
 import play.*;
 import play.mvc.*;
-
 import views.html.*;
+import models.Answers;
 
 public class Application extends Controller {
     public static Result index() {
-        Fib newFib = new Fib();
-        int answer = newFib.fib(4);
+        Answers newAnswer = new Answers();
+        Answers.create(newAnswer);
+        int answer = newAnswer.fib(4);
         String response = "Answer: " + answer;
         return ok(index.render(response));
     }
