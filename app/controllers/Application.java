@@ -10,7 +10,7 @@ public class Application extends Controller {
         Answers newAnswer = new Answers();
         Answers.create(newAnswer);
         int answer = newAnswer.fib(4);
-        String response = "Answer: " + answer;
+        String response = "Answer: " + newAnswer.result;//answer;
         return ok(index.render(response));
     }
 

@@ -12,6 +12,12 @@ import javax.persistence.*;
 @Entity
 public class Answers extends Model {
 
+    /*
+    public Answers() {
+        int result = fib(3);
+    }
+    */
+
     public int result;
 
     public int fib(int num) {
